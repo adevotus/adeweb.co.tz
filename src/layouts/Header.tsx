@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -40,19 +40,43 @@ export default function Header() {
               <div className="position-absolute absolute-centered z-index--1">
                 <h1 className="ms-2 fw-bolder text-outlined text-uppercase text-white pe-none display-1">Home</h1>
               </div>
-              <div className="d-flex gap-3 align-items-start"><a className="mb-0 ms-auto text-warning fs-0 fw-bold text-uppercase" href="blog.html#contact">Contact Now</a>
-                <ul className="navbar-nav ms-auto fs-4 ps-6">
-                  <li className="nav-item">
-                    <NavLink className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5"  exact to="/">Home </NavLink>
-                  </li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5 active" aria-current="page" href="index.html">Home</a></li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5" aria-current="page" href="portfolio.html">Portfolio</a></li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5" aria-current="page" href="gallery.html">Gallery</a></li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5" aria-current="page" href="exhibitions.html">Exhibitions</a></li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5" aria-current="page" href="about.html">About</a></li>
-                  <li className="nav-item"><a className="nav-link d-inline-block nav-text-outlined lh-1 text-white fs-5" aria-current="page" href="blog.html">Blog</a></li>
-                </ul>
-              </div>
+              <div className="d-flex gap-3 align-items-start">
+                    <a className="mb-0 ms-auto text-warning fs-0 fw-bold text-uppercase" href="blog.html#contact">
+                      Contact Now
+                    </a>
+                    <ul className="navbar-nav navbar-fotogency ms-auto text-end">
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0" to="/">
+                          Home
+                        </Link>
+                      </li>
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0 active" to="/Portifolia">
+                          Portfolio
+                        </Link>
+                      </li>
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0" to="/gallery">
+                          Gallery
+                        </Link>
+                      </li>
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0" to="/exhibitions">
+                          Exhibitions
+                        </Link>
+                      </li>
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0" to="/about">
+                          About
+                        </Link>
+                      </li>
+                      <li className="nav-item px-2 position-relative">
+                        <Link className="nav-link pt-0" to="/blog">
+                          Blog
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
             </div>
           </div>
 

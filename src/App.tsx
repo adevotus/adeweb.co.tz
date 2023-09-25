@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/portifolio" element={<Portifolia />}></Route>
+          <Route path="/Portifolia" element={<Portifolia />}></Route>
         </Routes>
       </Router>
     </QueryClientProvider>
