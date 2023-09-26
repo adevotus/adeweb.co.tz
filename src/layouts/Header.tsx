@@ -46,12 +46,12 @@ export default function Header() {
                     </a>
                     <ul className="navbar-nav navbar-fotogency ms-auto text-end">
                       <li className="nav-item px-2 position-relative">
-                        <Link className="nav-link pt-0" to="/">
+                        <Link className="nav-link pt-0 active" to="/">
                           Home
                         </Link>
                       </li>
                       <li className="nav-item px-2 position-relative">
-                        <Link className="nav-link pt-0 active" to="/Portifolia">
+                        <Link className="nav-link pt-0 " to="/Portifolia">
                           Portfolio
                         </Link>
                       </li>

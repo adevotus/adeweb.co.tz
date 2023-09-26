@@ -19,26 +19,24 @@ export default function Portifolia() {
         delay: 3000, // Auto transition every 3 seconds (3000 milliseconds)
       },
     });
-  }, []);
-
-  useEffect(() => {
+  
     const cursorInit = () => {
       const cursor = document.querySelector('.cursor-outer') as HTMLElement | null;
       const targets = document.querySelectorAll<HTMLElement>('a, .btn, [type="button"], input, textarea');
-
+  
       if (cursor) {
         document.addEventListener('mousemove', (e) => {
           cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
         });
       }
-
+  
       targets.forEach((item) => {
         item.addEventListener('mouseover', () => {
           if (cursor) {
             cursor.classList.add('link-hover');
           }
         });
-
+  
         item.addEventListener('mouseleave', () => {
           if (cursor) {
             cursor.classList.remove('link-hover');
@@ -46,9 +44,10 @@ export default function Portifolia() {
         });
       });
     };
-
+  
     cursorInit();
   }, []);
+  
 
   return (
     <div>
