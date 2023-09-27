@@ -61,7 +61,7 @@ export default function Header() {
                         </Link>
                       </li>
                       <li className="nav-item px-2 position-relative">
-                        <Link className="nav-link pt-0" to="/exhibitions">
+                        <Link className="nav-link pt-0" to="/exibihation">
                           Exhibitions
                         </Link>
                       </li>
