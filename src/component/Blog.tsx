@@ -1,47 +1,65 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../layouts/Header'
 import Footer from '../layouts/Footer'
+import '../assets/css/loader.css'
 
-function Blog () {
+function Blog() {
+    const [showLoader, setShowLoader] = useState(true);
     useEffect(() => {
         const cursorInit = () => {
-          const cursor = document.querySelector('.cursor-outer') as HTMLElement | null;
-          const targets = document.querySelectorAll<HTMLElement>('a, .btn, [type="button"], input, textarea');
+            const cursor = document.querySelector('.cursor-outer') as HTMLElement | null;
+            const targets = document.querySelectorAll<HTMLElement>('a, .btn, [type="button"], input, textarea');
     
-          if (cursor) {
-            document.addEventListener('mousemove', (e) => {
-              cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
-            });
-          }
+            if (cursor) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+                });
+            }
     
-          targets.forEach((item) => {
-            item.addEventListener('mouseover', () => {
-              if (cursor) {
-                cursor.classList.add('link-hover');
-              }
-            });
+            targets.forEach((item) => {
+                item.addEventListener('mouseover', () => {
+                    if (cursor) {
+                        cursor.classList.add('link-hover');
+                    }
+                });
     
-            item.addEventListener('mouseleave', () => {
-              if (cursor) {
-                cursor.classList.remove('link-hover');
-              }
+                item.addEventListener('mouseleave', () => {
+                    if (cursor) {
+                        cursor.classList.remove('link-hover');
+                    }
+                });
             });
-          });
+        };
+        cursorInit();
+        
+        const loaderTimeout = setTimeout(() => {
+            setShowLoader(false);
+        }, 3000);
+    
+        // Cleanup function to clear the timer
+        return () => {
+            clearTimeout(loaderTimeout);
         };
     
-        cursorInit();
-      }, []);
+        // Call the cursorInit function
+      
+    }, []);
+    
     return (
         <div>
             <main className="main" id="top">
                 <div className="cursor-outer d-none d-md-block" />
-              <Header/>
+                <Header />
                 <section className="py-2">
                     <div className="container px-md-5">
                         <div className="row g-4">
                             <div className="col-lg-4 col-md-6 d-flex">
                                 <div className="card border-0 mb-3">
-                                    <img className="card-img-top" src="../src/assets/img/blogs/img1.png"  />
+                                    {showLoader ? (
+                                        <div className="loader"></div>
+                                    ) : (
+                                        <img className="card-img-top" src="../src/assets/img/blogs/img1.png" alt="Blog" />
+                                    )}
                                     <div className="d-flex align-items-center justify-content-between">
                                         <div className="d-flex align-items-center"> <span className="fa-solid fa-circle-dot text-warning" />
                                             <p className="text-300 m-0 ps-1">6min read</p>
@@ -59,7 +77,12 @@ function Blog () {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 d-flex">
-                                <div className="card border-0 mb-3"><img className="card-img-top" src="../src/assets/img/blogs/img2.png"  />
+                                <div className="card border-0 mb-3">
+                                {showLoader ? (
+                                        <div className="loader"></div>
+                                    ) : (
+                                        <img className="card-img-top" src="../src/assets/img/blogs/img2.png" alt="Blog" />
+                                    )}
                                     <div className="d-flex align-items-center justify-content-between">
                                         <div className="d-flex align-items-center"> <span className="fa-solid fa-circle-dot text-warning" />
                                             <p className="text-300 m-0 ps-1">6min read</p>
@@ -72,12 +95,17 @@ function Blog () {
                                         <h5 className="mb-3">Simply dummy text of the printing and typesetting.</h5>
                                         <p className="text-200 m-0 mb-3">By - <span className="text-300 fw-bold">Frederico giuspam</span></p>
                                         <p className="mb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
-                                        <button className="btn btn-link text-warning p-0"><span className="fw-medium">Read full article</span><img className="ms-3" src="../src/assets/img/icons/long-arrow.png"/></button>
+                                        <button className="btn btn-link text-warning p-0"><span className="fw-medium">Read full article</span><img className="ms-3" src="../src/assets/img/icons/long-arrow.png" /></button>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 d-flex">
-                                <div className="card border-0 mb-3"><img className="card-img-top" src="../src/assets/img/blogs/img3.png"  />
+                                <div className="card border-0 mb-3">
+                                {showLoader ? (
+                                        <div className="loader"></div>
+                                    ) : (
+                                        <img className="card-img-top" src="../src/assets/img/blogs/img3.png" alt="Blog" />
+                                    )}
                                     <div className="d-flex align-items-center justify-content-between">
                                         <div className="d-flex align-items-center"> <span className="fa-solid fa-circle-dot text-warning" />
                                             <p className="text-300 m-0 ps-1">6min read</p>
@@ -90,7 +118,7 @@ function Blog () {
                                         <h5 className="mb-3">Simply dummy text of the printing and typesetting.</h5>
                                         <p className="text-200 m-0 mb-3">By - <span className="text-300 fw-bold">Frederico giuspam</span></p>
                                         <p className="mb-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
-                                        <button className="btn btn-link text-warning p-0"><span className="fw-medium">Read full article</span><img className="ms-3" src="../src/assets/img/icons/long-arrow.png"  /></button>
+                                        <button className="btn btn-link text-warning p-0"><span className="fw-medium">Read full article</span><img className="ms-3" src="../src/assets/img/icons/long-arrow.png" /></button>
                                     </div>
                                 </div>
                             </div>
