@@ -9,7 +9,7 @@ export default function Header() {
           <div className="col-8">
             <div className="d-inline-block"><a className="navbar-brand pt-0 fs-3 text-black d-flex align-items-center" href="index.html">
               <img className="img-fluid" src="../src/assets/img/icons/logo-icon.png" alt="" />
-              <span className="fw-bolder ms-2">Foto</span><span className="fw-thin">gency</span></a></div>
+              <span className="fw-bolder ms-2">Ade</span><span className="fw-thin">Web</span></a></div>
           </div>
           <div className="col-4 d-lg-none text-end pe-0">
             <button className="btn p-0 shadow-none text-black fs-2 d-inline-block" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle offcanvas navigation"><span className="menu-bar" /></button>
