@@ -10,6 +10,7 @@ import Blog from './component/Blog';
 import Exibihation from './component/Exibihation';
 
 
+
 const queryClient = new QueryClient();
 
 function App() {

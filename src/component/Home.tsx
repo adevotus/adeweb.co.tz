@@ -2,12 +2,15 @@
 import '../assets/css/scroll.css'
 import React, { useEffect } from 'react';
 import Header from '../layouts/Header';
-// import gsap from 'gsap';
+
+import { gsap } from 'gsap/gsap-core';
+
+
 // import ScrollTrigger from 'gsap/ScrollTrigger'
 
 export default function Home() {
 
-
+  console.log("the gsap values ",gsap);
 
   useEffect(() => {
     const cursorInit = () => {
