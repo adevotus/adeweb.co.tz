@@ -1,9 +1,10 @@
 // import { useState } from 'react'
 import '../assets/css/scroll.css'
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import Header from '../layouts/Header';
+import gsap from 'gsap';
 
-import { gsap } from 'gsap/gsap-core';
+// import { gsap } from 'gsap/gsap-core';
 
 
 // import ScrollTrigger from 'gsap/ScrollTrigger'

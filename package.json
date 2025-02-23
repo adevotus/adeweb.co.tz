@@ -21,6 +21,8 @@
     "swiper": "^10.3.0"
   },
   "devDependencies": {
+    "@types/gsap": "^3.0.0",
+    "@types/isotope-layout": "^3.0.14",
     "@types/node": "^22.13.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",

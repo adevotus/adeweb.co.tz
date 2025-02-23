@@ -8,17 +8,17 @@ export default function Portifolia() {
   SwiperCore.use([Pagination]);
 
   useEffect(() => {
-    const swiper = new SwiperCore('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000, // Auto transition every 3 seconds (3000 milliseconds)
-      },
-    });
+    // const swiper = new SwiperCore('.swiper-container', {
+    //   slidesPerView: 1,
+    //   spaceBetween: 30,
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true,
+    //   },
+    //   autoplay: {
+    //     delay: 3000, // Auto transition every 3 seconds (3000 milliseconds)
+    //   },
+    // });
   
     const cursorInit = () => {
       const cursor = document.querySelector('.cursor-outer') as HTMLElement | null;

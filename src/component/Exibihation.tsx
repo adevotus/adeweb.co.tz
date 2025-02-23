@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import Footer from '../layouts/Footer'
 import Header from '../layouts/Header'
 import SwiperCore from 'swiper';
@@ -9,17 +9,6 @@ function Exibihation() {
     SwiperCore.use([Pagination]);
 
     useEffect(() => {
-        const swiper = new SwiperCore('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000, // Auto transition every 3 seconds (3000 milliseconds)
-            },
-        });
 
         const cursorInit = () => {
             const cursor = document.querySelector('.cursor-outer') as HTMLElement | null;
